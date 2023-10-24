@@ -1,9 +1,9 @@
 local function lmao()
 while true do
     local success, error_message = pcall(function()
-        game:GetService("VirtualInputManager"):SendMouseButtonEvent(game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator.Prompt.AlertContents.Footer.Buttons[1].AbsolutePosition.X + tonumber(150), game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator.Prompt.AlertContents.Footer.Buttons[1].AbsolutePosition.Y + tonumber(50), 0, true, game, 1)
+        game:GetService("VirtualInputManager"):SendMouseButtonEvent(game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator.Prompt.AlertContents.Footer.Buttons[1].AbsolutePosition.X + tonumber(250), game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator.Prompt.AlertContents.Footer.Buttons[1].AbsolutePosition.Y + tonumber(50), 0, true, game, 1)
         task.wait()
-        game:GetService("VirtualInputManager"):SendMouseButtonEvent(game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator.Prompt.AlertContents.Footer.Buttons[1].AbsolutePosition.X + tonumber(150), game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator.Prompt.AlertContents.Footer.Buttons[1].AbsolutePosition.Y + tonumber(50), 0, false, game, 1)
+        game:GetService("VirtualInputManager"):SendMouseButtonEvent(game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator.Prompt.AlertContents.Footer.Buttons[1].AbsolutePosition.X + tonumber(250), game.CoreGui.PurchasePrompt.ProductPurchaseContainer.Animator.Prompt.AlertContents.Footer.Buttons[1].AbsolutePosition.Y + tonumber(50), 0, false, game, 1)
     end)
 
     if not success then

